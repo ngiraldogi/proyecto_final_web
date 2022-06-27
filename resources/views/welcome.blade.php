@@ -8,10 +8,36 @@
 </head>
 <body>
 @include('layouts.navbar')
-<center>
-    <h1>AQUI VA LO QUE LLEVA ESTO EN ESPECIFICO</h1>
-</center>
-
+    <center>
+    <h1>ESTOS SON LOS PRINCIPALES PRODUCTOS QUE PUEDES ENCONTRAR EN LA APP</h1>
+<div class="container">
+                <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Café</th>
+      <th scope="col">Platano</th>
+      <th scope="col">Yuca</th>
+      <th scope="col">Naranja</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th><img src=""></th>
+      <td><img src=""></td>
+      <td><img src=""></td>
+      <td><img src=""></td>
+    </tr>
+    <tr>
+      <th><img src=""></th>
+      <td><img src=""></td>
+      <td><img src=""></td>
+      <td><img src=""></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    </center>
+  
 
 @include('layouts.footer')
 
