@@ -22,3 +22,4 @@ Auth::routes(); /*todo lo que tenga autenticado va a estar dentro de esta ruta*/
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/auth/register', [AutenticacionController::class, 'register'])->name('auth.register');
+
