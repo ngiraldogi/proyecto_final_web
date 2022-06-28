@@ -18,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Auth::routes(); /*todo lo que tenga autenticado va a estar dentro de esta ruta*/
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
