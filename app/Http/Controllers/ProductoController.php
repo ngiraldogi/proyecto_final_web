@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ProductosController extends Controller
+class ProductoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -12,8 +12,8 @@ class ProductosController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    {   
+        return view ('Producto.index');
     }
 
     /**
@@ -23,7 +23,7 @@ class ProductosController extends Controller
      */
     public function create()
     {
-        //
+        return view ('Producto.create');
     }
 
     /**
@@ -56,7 +56,7 @@ class ProductosController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view ('producto.edit');
     }
 
     /**
@@ -68,7 +68,7 @@ class ProductosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
     /**
