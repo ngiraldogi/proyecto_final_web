@@ -7,7 +7,7 @@
     <title>Gestión Productos</title>
 </head>
 <body>
-    <button><a href="{{route('productos.create')}}">Crear Producto</a></button> //con el a y href voy de una pag a otra por medio de un boton o etiqueta
+    <button><a href="{{route('productos.create')}}">Crear Producto</a></button> 
 <table class="table">
     <thead>
     <tr>
@@ -27,7 +27,7 @@
     </tr>
     @endforeach
 </table>
-<button><a href="{{route('productos.edit', $producto->id)}}"> Editar Producto</a></button> //con el a y href voy de una pag a otra por medio de un boton o etiqueta
+<button><a href="{{route('productos.edit', $producto->id)}}"> Editar Producto</a></button> 
 <form action="{{route('productos.destroy', $producto->id)}}" method="POST">
     @csrf
     @method('DELETE')
