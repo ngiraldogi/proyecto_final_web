@@ -20,7 +20,7 @@ class Venta extends Migration
             $table->integer('cantidad');
             $table->decimal('total');
             $table->date('fecha');
-            $table->foreign('idUsuario')->references('id')->on('usuario');
+            $table->foreign('idUsuario')->references('id')->on('users');
             $table->foreign('idProd')->references('id')->on('producto');
             $table->timestamps(); 
         });
