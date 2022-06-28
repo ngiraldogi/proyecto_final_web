@@ -1,6 +1,5 @@
-@extends('layouts.app')
+@include('layouts.navbar')
 
-@section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -10,7 +9,7 @@
                     <h5 class="text-center">Si estás registrado, escribe tus datos para ingresar</h5>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('login')}}">
                         @csrf
 
                         <div class="row mb-3">
@@ -43,7 +42,7 @@
 
                         <div class="row mb-3">
                             <div class="col-md-6 offset-md-4">
-                                <a href="{{ route('auth.register') }}"> ¿No te has registrado?</a>
+                                <a href="{{ route('register') }}"> ¿No te has registrado?</a>
                             </div>
                         </div>
 
@@ -60,4 +59,4 @@
         </div>
     </div>
 </div>
-@endsection
+@include('layouts.footer')

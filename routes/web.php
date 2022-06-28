@@ -25,6 +25,7 @@ Route::get('/producto/create', [App\Http\Controllers\ProductoController::class, 
 Route::get('/producto/edit', [App\Http\Controllers\ProductoController::class, 'edit']);
 Route::resource('producto','\App\Http\Controllers\ProductoController');
 
+
 Auth::routes(); /*todo lo que tenga autenticado va a estar dentro de esta ruta*/
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
