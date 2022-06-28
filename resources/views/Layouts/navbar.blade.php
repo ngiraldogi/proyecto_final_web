@@ -12,8 +12,8 @@
     </head>
 
 <body>
-<nav class="navbar navbar-expand-lg bg-light">
-<div class="header-container">
+<nav class="navbar navbar-expand-lg bg-light mb-5">
+<div class="header-container mb-3 md-5">
     <a class="navbar-brand" href="#">
       <img src="{{URL::asset('img/logoEmpresa.jpeg')}}" width="150" height="75" class="d-inline-block align-text-top">
       <!--<img src="\INCORU_APP\INCORU_APP_PROGRAMACION_WEB_2022\img" alt="" width="30" height="24" class="d-inline-block align-text-top">-->
