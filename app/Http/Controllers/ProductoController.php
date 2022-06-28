@@ -13,7 +13,8 @@ class ProductoController extends Controller
      */
     public function index()
     {   
-        return view ('Producto.index');
+        /*return view ('Producto.index'); se apunta a home porque es quien gestionara los productos*/
+        return view('home')->with('producto',producto::all());
     }
 
     /**
@@ -23,7 +24,8 @@ class ProductoController extends Controller
      */
     public function create()
     {
-        return view ('Producto.create');
+        /*return view ('Producto.create');*/
+        return view ('productos.crear_productos');
     }
 
     /**
@@ -35,6 +37,17 @@ class ProductoController extends Controller
     public function store(Request $request)
     {
         //
+        $productos = new producto();
+         //no se pone el id del producto porque es autoincrementable
+        $productos-> nombre = $request->nom; 
+        $productos ->descripcion = $request ->des;
+        $productos ->stock = $request ->cant;
+        $productos ->precio = $request ->pre;
+        $productos ->imagen = $request ->img;
+        $productos ->categoria = $request ->cat;
+        $productos ->save();
+
+        return redirect()->route('producto.index'); 
     }
 
     /**
@@ -56,7 +69,9 @@ class ProductoController extends Controller
      */
     public function edit($id)
     {
-        return view ('producto.edit');
+       /* return view ('producto.edit');*/
+        $productos = producto::find($id);
+        return view('productos.editar_productos')->with('producto',$productos);
     }
 
     /**
@@ -68,7 +83,16 @@ class ProductoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+       $productos = producto::find($id);
+       $productos-> nombre = $request->nom; 
+       $productos ->descripcion = $request ->des;
+       $productos ->stock = $request ->cant;
+       $productos ->precio = $request ->pre;
+       $productos ->imagen = $request ->img;
+       $productos ->categoria = $request ->cat;
+       $productos ->save();
+
+       return redirect()->route('producto.index'); 
     }
 
     /**
@@ -79,6 +103,8 @@ class ProductoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $productos = producto::find($id);
+        $productos->delete();
+        return redirect()->route('producto.index');
     }
 }
